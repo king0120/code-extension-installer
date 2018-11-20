@@ -1,0 +1,10 @@
+{
+  "name": "code-extension-installer",
+  "version": "1.0.0",
+  "description": "Install vscode extensions with a extensions.txt file",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Lars Klopstra",
+  "license": "MIT"
+}
