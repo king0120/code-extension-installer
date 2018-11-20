@@ -1,10 +1,16 @@
 {
   "name": "code-extension-installer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Install vscode extensions with a extensions.txt file",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "start": "node CodeExtensionInstaller.js"
+  },
+  "keywords": [
+    "vscode",
+    "extensions",
+    "installer"
+  ],
   "author": "Lars Klopstra",
   "license": "MIT"
 }
