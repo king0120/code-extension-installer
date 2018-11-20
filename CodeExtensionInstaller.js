@@ -1,3 +1,5 @@
+'use strict';
+
 const { exec } = require('child_process');
 const fs = require('fs');
 
@@ -6,16 +8,35 @@ class CodeExtensionInstaller {
     this.extensions = [];
   }
 
+  /**
+   * Over engineered command-line colors ;)
+   *
+   * @param {*} style
+   * @param {*} text
+   * @memberof CodeExtensionInstaller
+   */
   cl(style, text) {
     console.log(style + text + '\x1b[0m');
   }
 
+  /**
+   * Remove (unnecessary) whitespaces from the array
+   *
+   * @returns {void}
+   * @memberof CodeExtensionInstaller
+   */
   cleanArray() {
     this.extensions = this.extensions.filter(
       extension => extension.trim() !== '',
     );
   }
 
+  /**
+   * Retrieve extensions from list and parse to array
+   *
+   * @returns {void}
+   * @memberof CodeExtensionInstaller
+   */
   getExtensions() {
     this.cl('\x1b[36m', '👀 Reading extensions from extensions.txt');
 
@@ -27,6 +48,12 @@ class CodeExtensionInstaller {
     });
   }
 
+  /**
+   * Install each extension from the list
+   *
+   * @returns {void}
+   * @memberof CodeExtensionInstaller
+   */
   installExtensions() {
     this.cl('\x1b[36m', '✔️ Ready to install extensions');
 
@@ -40,6 +67,11 @@ class CodeExtensionInstaller {
     }
   }
 
+  /**
+   * Entry point
+   *
+   * @memberof CodeExtensionInstaller
+   */
   main() {
     this.cl('\x1b[36m', '🔥 Started CodeExtensionInstaller');
 
@@ -47,4 +79,7 @@ class CodeExtensionInstaller {
   }
 }
 
+/**
+ * Instance of CodeExtensionInstaller
+ */
 new CodeExtensionInstaller().main();
