@@ -11,8 +11,8 @@ class CodeExtensionInstaller {
   /**
    * Over engineered command-line colors ;)
    *
-   * @param {*} style
-   * @param {*} text
+   * @param {string} style
+   * @param {string} text
    * @memberof CodeExtensionInstaller
    */
   cl(style, text) {
